@@ -1,0 +1,43 @@
+<form #f="ngForm" (ngSubmit)="submitForm(f)">
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="model.description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="email">Phone Number*</label>
+    <input
+      type="phone"
+      class="form-control"
+      id="phone"
+      name="phone"
+      required
+      [(ngModel)]="model.phone"
+      placeholder="Your phone number"
+    />
+  </div>
+  <div class="form-group">
+    <label for="subject">Expect to hear</label>
+    <input
+      type="text"
+      class="form-control"
+      id="expect"
+      name="expect"
+      [(ngModel)]="model.expect"
+      placeholder="Expect to hear"
+    />
+  </div>
+  <div class="form-group">
+    <label for="body">Reply</label>
+    <input
+      type="text"
+      class="form-control"
+      id="reply"
+      name="reply"
+      [(ngModel)]="model.reply"
+      placeholder="Reply"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Update</button>
+  <div>{{ this.finalMessage }}</div>
+</form>

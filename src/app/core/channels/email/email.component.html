@@ -1,0 +1,37 @@
+<form #f="ngForm" (ngSubmit)="submitForm(f)">
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="model.description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="email">Email Address*</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      required
+      placeholder="name@example.com"
+      [(ngModel)]="model.email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input
+      type="text"
+      class="form-control"
+      id="subject"
+      name="subject"
+      placeholder="Subject"
+      [(ngModel)]="model.subject"
+    />
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <textarea class="form-control" name="body" id="body" rows="3" [(ngModel)]="model.body"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Update</button>
+  <div>{{ this.finalMessage }}</div>
+
+</form>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "channel-mgt"
+    }
+  },
+  "defaultProject": "channel-mgt",
+  "cli": {
+    "analytics": false
+  }
 }

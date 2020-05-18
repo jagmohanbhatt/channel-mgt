@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.navbar-nav a.active {
+    background-color: #e7e7e7 !important;
+    color: #555 !important;
+}
+.table tr td.active {
+  background-color:#123456 !important;
+  color: white;
+}
+
+.table tr {
+    cursor: pointer;
+}
